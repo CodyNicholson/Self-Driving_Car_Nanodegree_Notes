@@ -4,7 +4,7 @@ Let’s code up a simple color selection in Python.
 
 We'll be working with this image:
 
-![alt tag](https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/tree/master/2_Finding_Lane_Lines/colorSelectionImg.jpg)
+![alt tag](https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/colorSelectionImg.jpg?raw=true)
 
 Check out the code below. First, I import pyplot and image from matplotlib. I also import numpy for operating on the image.
 
@@ -64,7 +64,7 @@ In the code snippet above, **red_threshold**, **green_threshold** and **blue_thr
 
 In the next quiz, you will modify the values of red_threshold, green_threshold and blue_threshold until you retain as much of the lane lines as possible while dropping everything else. Your output image should look like the one below.
 
-![alt tag](https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/tree/master/2_Finding_Lane_Lines/colorSelectedImg.png)
+![alt tag](https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/colorSelectedImg.png?raw=true)
 
 ***
 
