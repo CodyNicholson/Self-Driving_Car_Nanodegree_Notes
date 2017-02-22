@@ -14,7 +14,7 @@ In Hough space, I can represent my "x vs. y" line as a point in "m vs. b" instea
 
 So now I’d like to check your intuition… if a line in image space corresponds to a point in Hough space, what would two parallel lines in image space correspond to in Hough space?
 
-![alt tag](!https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/houghQ1.png?raw=true)
+![alt tag](https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/houghQ1.png?raw=true)
 
 **D** since parallel lines have the same slope, which is to say, the same “m” parameter in our line model. So, in parameter space, two parallel lines would be represented by two points at the same m value, but different b values.
 
@@ -26,7 +26,7 @@ A single point in image space has many possible lines that pass through it, but 
 
 So what is the representation of a point in image space in Hough space?
 
-![alt tag](!https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/houghQ2.png?raw=true)
+![alt tag](https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/houghQ2.png?raw=true)
 
 **A** since a point in image space describes a line in Hough space. So a line in an image is a point in Hough space and a point in an image is a line in Hough space… cool!
 
@@ -34,7 +34,7 @@ So what is the representation of a point in image space in Hough space?
 
 What if you have 2 points in image space. What would that look like in Hough space?
 
-![alt tag](!https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/houghQ3.png?raw=true)
+![alt tag](https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/houghQ3.png?raw=true)
 
 **C** since two points in image space correspond to two lines in Hough Space. Not only that, but these lines must intersect
 
@@ -42,7 +42,7 @@ What if you have 2 points in image space. What would that look like in Hough spa
 
 Alright, now we have two intersecting lines in Hough Space. How would you represent their intersection at the point (m0, b0) in image space?
 
-![alt tag](!https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/houghQ4.png?raw=true)
+![alt tag](https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/houghQ4.png?raw=true)
 
 **A** since the intersection point at (m0, b0) represents the line y = m0x + b0 in image space and it must be the line that passes through both points!
 
@@ -62,7 +62,7 @@ To do this, we'll be using an OpenCV function called HoughLinesP that takes seve
 
 Here's the image we're working with:
 
-![alt tag](!https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/houghEx1.jpg?raw=true)
+![alt tag](https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/houghEx1.jpg?raw=true)
 
 Let's look at the input parameters for the OpenCV function HoughLinesP that we will use to find lines in the image. You will call it like this:
 
@@ -127,7 +127,7 @@ combo = cv2.addWeighted(color_edges, 0.8, line_image, 1, 0)
 plt.imshow(combo)
 ```
 
-![alt tag](!https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/houghEx2.jpg?raw=true)
+![alt tag](https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/houghEx2.jpg?raw=true)
 
 As you can see I've detected lots of line segments!
 
