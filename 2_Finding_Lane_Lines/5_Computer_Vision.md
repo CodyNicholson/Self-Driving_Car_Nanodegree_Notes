@@ -37,7 +37,7 @@ image = mpimg.imread('exit-ramp.jpg')
 plt.imshow(image)
 ```
 
-![alt tag](!https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/cannyAlgImg.jpg?raw=true)
+![alt tag](https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/cannyAlgImg.jpg?raw=true)
 
 Here we have an image of the road, and it's fairly obvious by eye where the lane lines are, but what about using computer vision?
 
@@ -49,7 +49,7 @@ gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY) #grayscale conversion
 plt.imshow(gray, cmap='gray')
 ```
 
-![alt tag](!https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/cannyAlgImgGray.jpg?raw=true)
+![alt tag](https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/cannyAlgImgGray.jpg?raw=true)
 
 Let’s try our Canny edge detector on this image. This is where OpenCV gets useful. First, we'll have a look at the parameters for the OpenCV Canny function. You will call it like this:
 
@@ -99,7 +99,7 @@ edges = cv2.Canny(blur_gray, low_threshold, high_threshold)
 plt.imshow(edges, cmap='Greys_r')
 ```
 
-![alt tag](!https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/cannyAlgImgGradient.jpg?raw=true)
+![alt tag](https://github.com/CodyNicholson/Self-Driving_Car_Nanodegree/blob/master/2_Finding_Lane_Lines/cannyAlgImgGradient.jpg?raw=true)
 
 Here I've called the OpenCV function Canny on a Gaussian-smoothed grayscaled image called blur_gray and detected edges with thresholds on the gradient of high_threshold, and low_threshold.
 
