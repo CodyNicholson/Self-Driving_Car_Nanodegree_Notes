@@ -140,7 +140,8 @@ def topological_sort(feed_dict):
     """
     Sort the nodes in topological order using Kahn's Algorithm.
 
-    `feed_dict`: A dictionary where the key is a `Input` Node and the value is the respective value feed to that Node.
+    `feed_dict`: A dictionary where the key is a `Input`
+    Node and the value is the respective value feed to that Node.
 
     Returns a list of sorted nodes.
     """
