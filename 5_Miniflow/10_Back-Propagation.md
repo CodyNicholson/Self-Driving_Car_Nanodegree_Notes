@@ -509,3 +509,11 @@ def forward_and_backward(graph):
         n.backward()
 
 ```
+
+The backward method sums the derivative (it's a normal derivative when there's only one variable) with respect to the only input over all the output nodes. The last line implements the derivative, ∂sigmoid/∂x * ∂cost/∂sigmoid.
+
+Replacing the math expression with code:
+
+​∂sigmoid/∂x is sigmoid * (1 - sigmoid) and ∂cost/∂sigmoid is grad_cost.
+
+Now that you have the gradient of the cost with respect to each input (the return value from forward_and_backward()) your network can start learning! To do so, you will implement a technique called **Stochastic Gradient Descent**.
