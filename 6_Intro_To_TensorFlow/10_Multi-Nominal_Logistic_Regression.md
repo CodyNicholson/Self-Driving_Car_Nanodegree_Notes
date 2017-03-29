@@ -1,2 +1,0 @@
-#Multi-Nominal Logistic Regression
-
