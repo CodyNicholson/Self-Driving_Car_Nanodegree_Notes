@@ -1,4 +1,4 @@
-#Rectified Linear Units (RELU)
+# Rectified Linear Units (RELU)
 
 **RELUs** are the simplest non-linear functions there are. They are linear if x is greater than 0, and they are 0 everywhere else. 
 
