@@ -1,4 +1,4 @@
-#Neural Networks
+# Neural Networks
 
 In this unit we begin to understand the underlying principles and best practices of neural networks. We cover:
 
