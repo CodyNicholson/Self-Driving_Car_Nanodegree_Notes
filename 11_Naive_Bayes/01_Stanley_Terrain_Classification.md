@@ -26,7 +26,7 @@ In the previous example we had a decision surface that was curved, but they can 
 
 ### Naive Bayes
 
-Using a library called **sklearn** we can implement the *Naive Bayes* algorithm to create a decision surface to classify the data points in our scatter plot.
+Using a library called **sklearn** we can implement the *Naive Bayes* classifier to create a decision surface to classify the data points in our scatter plot
 
 ##### Gaussian Naive Bayes
 
@@ -121,12 +121,13 @@ To solve this problem, we should save 10%-20% of our training data and use it as
 
 ***
 
-### Naive Bayes Strengths & Weaknesses
+### Naive Bayes Classifier Strengths & Weaknesses
 
 Naive Bayes is good because:
 
 - It is easy to implement
-- It is very efficient to run this algorithm on large datasets
+- It is very efficient to run this algorithm on large datasets (it scales)
+- It is great for text categorization where it uses every word of an article as a feature (detect span, etc.)
 
 Naive Bayes is bad at:
 
