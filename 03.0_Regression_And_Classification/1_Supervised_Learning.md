@@ -2,17 +2,17 @@
 
 There are two types of **Supervised Learning**: *Classification* and *Regression*
 
--
+***
 
 **Classification** is the process of taking some kind of input and mapping it to some kind of discrete label
 
 **Regression** is all about continuous values. For example, given some point you can use regression to map it to some value based on the location of other similar points on some graph.
 
--
+***
 
 The difference between classification and regression is the difference between mapping from some input some small number of discrete values (Classification), and mapping from some input space to some real number (Regression).
 
--
+***
 
 ### Classification Or Regression:
 
