@@ -4,6 +4,13 @@ Like Support Vector Machines, **Decision Trees** can create linear decision boun
 
 ***
 
-### Strengths & Weaknesses
+### Strengths
 
-- Very intuitive, you can look at the result and understand it easily
+- Very intuitive graphically, you can look at the result and understand it easily
+- Easy to use
+- You can build bigger classifiers out of decision trees called **ensemble methods**
+
+### Weaknesses
+
+- Prone to overfitting, especially if you have data with lots of features (You have to be careful with the parameter tunes)
+- You have to know when to stop the growth of the tree
