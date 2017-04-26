@@ -1,4 +1,4 @@
-#Classification Learning Terms
+# Classification Learning Terms
 
 **Instance**: These are vectors of attributes that define whatever your input space is. They can be pictures and all the pixels that make them up, or credit score examples. The set of things that you are looking at.
 
