@@ -1,10 +1,10 @@
-#Optimizing A Logistic Classifier
+# Optimizing A Logistic Classifier
 
 Training Logistic Models using Gradient Descent is great since it optimizes the error measure. However, it is difficult to scale.
 
 ***
 
-###Stochastic Gradient Descent
+### Stochastic Gradient Descent
 
 The problem with scaling gradient descent is that if it kes N operations to compute your loss (L=Summation i(D_i)), then it takes N times 3 operations to compute its gradient (-Alpha*Delta*Loss(w1,w2)). As we saw earlier, the Loss function is huge and it runs on every single element in your training set. That can be a lot of computing if your data set is big. We want to be able to train on lots of data because in practice, on real problems, you will always get more gains the more data you use. Since Gradient Descent is iterative, you have to do that for many steps. 
 

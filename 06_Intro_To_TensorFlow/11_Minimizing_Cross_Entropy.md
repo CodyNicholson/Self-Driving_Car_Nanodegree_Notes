@@ -1,8 +1,8 @@
-#Minimizing Cross Entropy
+# Minimizing Cross Entropy
 
-#####D(S(w*x+b),L)
+##### D(S(w*x+b),L)
 
-#####D(A,a) D(A,b)
+##### D(A,a) D(A,b)
 
 How are we going to find those weights (w) and those biases (b)) that will get our classifier to do what we want it to do - That is, have a low distance for the correct class but have a high distance for the incorrect class
 

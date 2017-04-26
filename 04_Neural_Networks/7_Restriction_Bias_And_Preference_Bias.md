@@ -1,4 +1,4 @@
-#Restriction Bias & Preference Bias
+# Restriction Bias & Preference Bias
 
 Restriction Bias tells you something about the representational power of whatever data structure it is that you are using. So in this case, the network of neurons. It also tells you the set of hypothesis that you are willing to consider. If there is a great deal of restriction, then there is lots of different kinds of models that were  not even considered. We are restricting our view to just a subset of those. In the case of neural nets, the restrictions we will use are: Linear Perceptron Units (half space planes), Sigmoids (much more complex, not much restriction).
 
@@ -14,7 +14,7 @@ Use Cross Validation to avoid over-fitting
 
 ***
 
-###Preference Bias
+### Preference Bias
 
 Preference Bias tells you what it is you are able to represent. It tells you about the algorithm that you are using to learn. It tells you, given two representations, why I would prefer one over the other. 
 

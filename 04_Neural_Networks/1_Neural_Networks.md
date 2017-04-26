@@ -1,10 +1,10 @@
-#Neural Networks
+# Neural Networks
 
 A neural network in AI is designed to mimic the brain. Our AI neural network has neurons that fire under different conditions. We train these neurons so that they know when to fire.
 
 ***
 
-###Perceptron
+### Perceptron
 
 A Perceptron is a specific kind of neuron in a neural network.
 
@@ -18,7 +18,7 @@ We take the sum of all the products that we get from multiplying each input by i
 
 ***
 
-#Artificial Neural Networks Example
+### Artificial Neural Networks Example
 
 x1 = 1, w1 = 1/2
 

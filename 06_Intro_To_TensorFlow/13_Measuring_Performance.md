@@ -1,4 +1,4 @@
-#Measuring Performance
+# Measuring Performance
 
 A classifier will always try to compare new data to data it has seen before in the training set. When it sees new data originally, it will have no idea what to do. This is why we need to help our classifier generalize more so it can handle new data well. 
 

@@ -1,4 +1,4 @@
-#Linear to Logistic Regression
+# Linear to Logistic Regression
 
 Now that you understand linear regression is about predicting values from past events, how about classifying using data? In situations like determining if a patient has cancer, the species of fish, or who's talking in a room are all classifications problems. This is where logistic regression comes in.
 

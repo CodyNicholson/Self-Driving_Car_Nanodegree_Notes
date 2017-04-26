@@ -1,4 +1,4 @@
-#Logistic Regression
+# Logistic Regression
 
 In **Logistic Regression** we are not trying to determine a point based on the location of other points like Linear Regression, instead we are trying to classify points based on their locations on a graph. We do this by drawing lines on our graph to separate the points into groups.
 

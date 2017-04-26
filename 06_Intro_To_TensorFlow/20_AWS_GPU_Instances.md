@@ -1,4 +1,4 @@
-#AWS GPU Instances
+# AWS GPU Instances
 
 Depending on the size of your training set and the speed of your CPU, you might be able to train your neural network on your local CPU. Training could take anywhere from 15 minutes to several hours if you train for many epochs.
 
@@ -8,9 +8,9 @@ It's possible to purchase your own NVIDIA GPU, or you may have one built into yo
 
 If not, it’s easy (although not free) to access a GPU-enabled server (also known as an "instance") through Amazon Web Services.
 
--
+***
 
-###1. Create an AWS Account
+### 1. Create an AWS Account
 
 Visit aws.amazon.com and click on the "Create an AWS Account" button.
 
@@ -24,9 +24,9 @@ Furthermore, when you sign up, you will also need to choose a support plan. You 
 
 Once you finish signing up, wait a few minutes to receive your AWS account confirmation email. Then return to aws.amazon.com and sign in.
 
--
+***
 
-###2. View Your Limit
+### 2. View Your Limit
 
 View your EC2 Service Limit report at: https://console.aws.amazon.com/ec2/v2/home?#Limits
 
@@ -38,9 +38,9 @@ Amazon Web Services has a service called Elastic Compute Cloud (EC2), which allo
 
 By default, however, AWS sets a limit of 0 on the number of g2.2xlarge instances a user can run, which effectively prevents you from launching this instance.
 
--
+***
 
-###3. Submit a Limit Increase Request
+### 3. Submit a Limit Increase Request
 
 From the EC2 Service Limits page, click on “Request limit increase” next to “g2.2xlarge”.
 
@@ -56,15 +56,15 @@ For the “Use Case Description”, you can simply state: “I would like to use
 
 Note: If you have never launched an instance of any type on AWS, you might receive an email from AWS Support asking you to initialize your account by creating an instance before they approve the limit increase.
 
--
+***
 
-###4. Wait for Approval
+### 4. Wait for Approval
 
 You must wait until AWS approves your Limit Increase Request. AWS typically approves these requests within 48 hours.
 
--
+***
 
-###5. Launch an Instance
+### 5. Launch an Instance
 
 Once AWS approves your Limit Increase Request, you can start the process of launching your instance.
 
@@ -80,9 +80,9 @@ Search for the “udacity-carnd” AMI.
 
 Click on the “Select” button.
 
--
+***
 
-###6. Select the Instance Type
+### 6. Select the Instance Type
 
 You must next choose an instance type, which is the hardware on which the AMI will run.
 
@@ -92,9 +92,9 @@ Select the g2.2xlarge instance type:
 
 Finally, click on the “Review and Launch” button:
 
--
+***
 
-###7. Add Storage
+### 7. Add Storage
 
 Your instance is now configured and ready for launch, but it would probably help to add storage above and beyond the 8GB that come with the g2.2xlarge instance by default.
 
@@ -104,9 +104,9 @@ Increase the storage size to 16 GB (or more, if necessary):
 
 Click on the “Review and Launch” button again.
 
--
+***
 
-###8. Configure the Security Group
+### 8. Configure the Security Group
 
 Running and accessing a Jupyter notebook from AWS requires special configurations.
 
@@ -126,15 +126,15 @@ Set the "Port Range" to "8888"
 Select "Anywhere" as the "Source"
 Click "Review and Launch" (again)
 
--
+***
 
-###9. Launch the Instance
+### 9. Launch the Instance
 
 Click on the “Launch” button to launch your GPU instance!
 
--
+***
 
-###10. Proceed Without a Key Pair
+### 10. Proceed Without a Key Pair
 
 Oops. Before you can launch, AWS will ask if you’d like to specify an authentication key pair.
 
@@ -142,9 +142,9 @@ In this case the AMI has a pre-configured user account and password, so you can 
 
 Next, click the “View Instances” button to go to the EC2 Management Console and watch your instance boot.
 
--
+***
 
-###11. Be Careful!
+### 11. Be Careful!
 
 From this point on, AWS will charge you for a running an EC2 instance. You can find the details on the EC2 On-Demand Pricing page.
 
@@ -154,9 +154,9 @@ AWS charges primarily for running instances, so most of the charges will cease o
 
 There is no way to limit AWS to only a certain budget and have it auto-shutdown when it hits that threshold. However, you can set AWS Billing Alarms.
 
--
+***
 
-###12. Log In
+### 12. Log In
 
 After launch, your instance may take a few minutes to initialize.
 
@@ -170,9 +170,9 @@ ssh carnd@X.X.X.X
 
 Authenticate with the password: carnd
 
--
+***
 
-###13. Launch a Jupyter Notebook
+### 13. Launch a Jupyter Notebook
 
 Congratulations! You now have a GPU-enabled server on which to train your neural networks.
 
@@ -185,9 +185,9 @@ Enter the repo directory: cd CarND-LeNet-Lab
 Activate the new environment: source activate carnd-term1
 Run the notebook: jupyter notebook LeNet-Lab-Solution.ipynb
 
--
+***
 
-###14. Run the Jupyter Notebook
+### 14. Run the Jupyter Notebook
 
 From your local machine:
 

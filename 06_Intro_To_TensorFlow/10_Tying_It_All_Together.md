@@ -1,4 +1,4 @@
-#Tying It All Together - Multinomial Logistic Classification
+# Tying It All Together - Multinomial Logistic Classification
 
 1. We have an *input* (X) that is going to be turned into *logits* (y) using a **linear model**, which is basically your matrix multiply and a bias (Weights*X*+bias)
 

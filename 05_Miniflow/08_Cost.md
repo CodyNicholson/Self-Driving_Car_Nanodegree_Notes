@@ -1,4 +1,4 @@
-#Cost
+# Cost
 
 This is exciting! At this point, you have used weights and biases to compute outputs. And you've used an activation function to categorize the output. As you may recall, neural networks improve the accuracy of their outputs by modifying weights and biases in response to training against labeled datasets.
 
@@ -45,7 +45,7 @@ As it stands right now, it outputs gibberish. The activation of the sigmoid node
 
 ***
 
-###Code:
+### Code:
 
 nn.py:
 

@@ -1,4 +1,4 @@
-#XOR As Perceptron Network
+# XOR As Perceptron Network
 
 XOR will return 0 if both the inputs are the same and true if both the inputs are different. On a graph you cannot portray this relationship with a single line, so we need to use a network of Perceptrons to accomplish this task.
 

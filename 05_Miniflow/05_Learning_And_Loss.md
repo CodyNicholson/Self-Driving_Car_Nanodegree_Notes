@@ -1,10 +1,10 @@
-#Learning & Loss
+# Learning & Loss
 
 Like MiniFlow in its current state, neural networks take inputs and produce outputs. But unlike MiniFlow in its current state, neural networks can improve the accuracy of their outputs over time (it's hard to imagine improving the accuracy of Add over time!). To explore why accuracy matters, I want you to first implement a trickier (and more useful!) node than Add: the Linear node.
 
 ***
 
-###The Linear Function
+### The Linear Function
 
 ![alt tag](linearFunction.png)
 
@@ -26,7 +26,7 @@ Remember, by varying the weights, you can vary the amount of influence any given
 
 In this next quiz, you'll try to build a linear neuron that generates an output by applying a simplified version of Equation (1). *Linear* should take an list of inbound nodes of length n, a list of weights of length n, and a bias.
 
-####Instructions
+#### Instructions
 
 1. Open nn.py below. Read through the neural network to see the expected output of Linear.
 2. Open miniflow.py below. Modify Linear, which is a subclass of Node, to generate an output with Equation (1).

@@ -1,4 +1,4 @@
-#Back-Propagation
+# Back-Propagation
 
 As promised, we'll now discuss the gradient in more depth. Specifically we'll focus on the following insight:
 
@@ -10,7 +10,7 @@ How do we determine the effect a parameter has on the cost? This technique is fa
 
 ***
 
-###Derivatives
+### Derivatives
 
 In calculus, the derivative tells us how something changes with respect to something else. Or, put differently, how sensitive something is to something else.
 
@@ -32,7 +32,7 @@ The answer is that the slope (or derivative) itself changes as x changes. If we 
 
 ***
 
-###Chain Rule
+### Chain Rule
 
 Let's return to neural networks and the original goal of figuring out what effect a parameter has on the cost.
 
@@ -100,14 +100,14 @@ This insight makes back-propagation much easier to implement. When computing the
 
 NOTE: As a quick aside, you might be wondering why we're even computing the derivative of cost w.r.t l1. After all, l1 is not a parameter of the neural network. While that is true, W1 and b1 are parameters of the network, and if you write the expression for cost w.r.t W1 or b1, you'll notice that the derivative of s1 w.r.t l1 is a term in that expression, and so for the chain rule, we'll need to calculate the derivative of cost w.r.t l1 at some point.
 
-####Additional Resources
+#### Additional Resources
 
 Yes you should understand backprop by Andrej Karpathy
 Vector, Matrix, and Tensor Derivatives by Erik Learned-Miller.
 
 ***
 
-###New Code
+### New Code
 
 There have been a couple of changes to MiniFlow since we last took it for a spin:
 
@@ -179,7 +179,7 @@ def forward_and_backward(graph):
         n.backward()
 ```
 
-####Setup
+#### Setup
 
 Here's the derivative of the sigmoid function w.r.t x:
 
@@ -190,7 +190,7 @@ sigmoid(x)=1/(1+exp(−x))
 - Complete the implementation of back-propagation for the Sigmoid node by finishing the backward method in miniflow.py.
 - The backward methods for all other nodes have already been implemented. Taking a look at them might be helpful.
 
-###Code:
+### Code:
 
 nn.py:
 

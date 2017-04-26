@@ -1,4 +1,4 @@
-#Mini-batching
+# Mini-batching
 
 In this section, you'll go over what mini-batching is and how to apply it in TensorFlow.
 
@@ -42,7 +42,7 @@ Let's look at how you implement mini-batching in TensorFlow.
 
 -
 
-###TensorFlow Mini-batching
+### TensorFlow Mini-batching
 
 In order to use mini-batching, you must first divide your data into batches.
 
@@ -65,7 +65,7 @@ Going back to our earlier example, this setup allows you to feed features and la
 
 ***
 
-###Quiz
+### Quiz
 
 Implement the batches function to batch features and labels. The function should return each batch with a maximum size of batch_size. To help you with the quiz, look at the following example output of a working batches function.
 
@@ -121,8 +121,6 @@ The example_batches variable would be the following:
     ]
 ]
 ```
-
--
 
 sandbox.py:
 

@@ -1,4 +1,4 @@
-#Supervised Learning
+# Supervised Learning
 
 There are two types of **Supervised Learning**: *Classification* and *Regression*
 
@@ -14,7 +14,7 @@ The difference between classification and regression is the difference between m
 
 -
 
-###Classification Or Regression:
+### Classification Or Regression:
 
 **Input**: Credit history
 **Output**: Should I lend money to this person (T/F)?

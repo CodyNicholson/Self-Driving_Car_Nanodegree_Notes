@@ -1,10 +1,10 @@
-#Cross Validation
+# Cross Validation
 
 After you train your algorithm on your training set (with points and labels), you need to test it out on a different set af data called your testing set which does not have the labels. Your concept will give the data in your testing set labels and then you can check to see if it was right.
 
 **The goal is always to generalize**, we don't test on the training set because we want our program to be ready for real-world random data. If we don't generalize our program won't be able to guess correctly in the real world with real data. 
 
-All data needs to be independant and identically distributed, all the data that we have collected is all coming from the same source. All draw from same distribution. 
+All data needs to be independent and identically distributed, all the data that we have collected is all coming from the same source. All draw from same distribution. 
 
 Test and training set data represent the real world data our program will need to be ready for. 
 

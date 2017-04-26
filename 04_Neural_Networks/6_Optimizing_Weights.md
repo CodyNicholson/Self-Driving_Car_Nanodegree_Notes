@@ -1,4 +1,4 @@
-#Optimizing Weights
+# Optimizing Weights
 
 One of the things that goes wrong when you try and run gradient descent on a complex network with lots of data is that you get stuck in these local minima. Then you start to wonder if there is some other way that you can optimize these weights so they minimize error on the training set.
 

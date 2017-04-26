@@ -1,6 +1,6 @@
-#Gradient Descent
+# Gradient Descent
 
-###Backpropagation
+### Backpropagation
 
 Great! We've successfully calculated a full forward pass and found the cost. Next we need to start a backwards pass, which starts with back-propagation. Back-propagation is the process by which the network runs error values backwards.
 
@@ -10,7 +10,7 @@ Making sense of the purpose of back-propagation comes more easily after you work
 
 ***
 
-###Gradient Descent
+### Gradient Descent
 
 ![alt tag](gradientDescent.png)
 
@@ -36,7 +36,7 @@ It may get stuck in a local minimum while the absolute minimum may be "over the 
 
 ***
 
-###Journey to the Bottom of the Valley
+### Journey to the Bottom of the Valley
 
 We know we'd like to move the ball to the bottom of the valley, but how do we accomplish this?
 

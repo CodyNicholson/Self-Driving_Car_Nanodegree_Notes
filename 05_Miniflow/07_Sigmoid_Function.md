@@ -1,4 +1,4 @@
-#Sigmoid Function
+# Sigmoid Function
 
 ![alt tag](sigmoidFunction.png)
 
@@ -37,7 +37,7 @@ Inputs > Linear Transform > Sigmoid
 
 ***
 
-###Code
+### Code
 
 nn.py:
 

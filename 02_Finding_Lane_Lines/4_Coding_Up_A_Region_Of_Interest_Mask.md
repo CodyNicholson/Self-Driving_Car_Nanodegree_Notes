@@ -1,4 +1,4 @@
-#Coding Up A Region Of Interest Mask
+# Coding Up A Region Of Interest Mask
 
 Now you've seen that with a simple color selection we have managed to eliminate almost everything in the image except the lane lines.
 
@@ -52,7 +52,7 @@ plt.imshow(region_select)
 
 ***
 
-###Combining Color and Region Selections
+### Combining Color and Region Selections
 
 Now you've seen how to mask out a region of interest in an image. Next, let's combine the mask and color selection to pull only the lane lines out of the image.
 

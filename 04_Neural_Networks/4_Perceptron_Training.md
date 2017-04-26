@@ -1,4 +1,4 @@
-#Perceptron Training
+# Perceptron Training
 
 Given examples, find weights that map inputs to outputs
 
@@ -9,7 +9,7 @@ To do this we use two different rules that have been developed to do this:
 
 ***
 
-###Perceptron Rule
+### Perceptron Rule
 
 This rule tells us how to set the weights of a single unit so that it matches some training set
 
@@ -25,7 +25,7 @@ The Learning Rate says that we will figure out the direction that we want to mov
 
 ***
 
-###Gradient Descent
+### Gradient Descent
 
 When we are given a problem that cannot be solved using a linear function, we should use Gradient Descent instead of the Perceptron Rule
 
@@ -35,7 +35,7 @@ a = Summation(xi*wi)
 
 ***
 
-###Comparison Of Learning Rules
+### Comparison Of Learning Rules
 
 Perceptron Rule that guarantees of finite convergence: Change in Wi = N(y-y^) * Xi
 

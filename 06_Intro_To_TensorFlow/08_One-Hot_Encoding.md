@@ -1,4 +1,4 @@
-#One-Hot Coding
+# One-Hot Coding
 
 Our Softmax algorithm needs a way to represent our labels (classes) mathematically. This can be done using **One-Hot Encoding**.
 
@@ -6,7 +6,7 @@ We can encode the correct class with the value 1, and all the incorrect classes 
 
 ***
 
-###Examples:
+### Examples:
 
 Given a picture of the letter "a" the one-hot encoded classes would be:
 

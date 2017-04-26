@@ -1,6 +1,6 @@
-#Regression & Classification
+# Regression & Classification
 
-This directory for Regreeion & Classification contains:
+This directory for Regression & Classification contains:
 
 - Model selection and under/overfitting
 - Cross validation

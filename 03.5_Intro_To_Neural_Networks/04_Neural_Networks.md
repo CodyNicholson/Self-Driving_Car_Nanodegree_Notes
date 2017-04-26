@@ -1,4 +1,4 @@
-#Neural Networks
+# Neural Networks
 
 Previously we have looked at Logistic Regression where we create a single model line to divide our data into one of two classes
 

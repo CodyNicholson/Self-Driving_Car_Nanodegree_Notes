@@ -1,4 +1,4 @@
-#Coding Up A Color Selection
+# Coding Up A Color Selection
 
 Let’s code up a simple color selection in Python.
 
@@ -68,7 +68,7 @@ In the next quiz, you will modify the values of red_threshold, green_threshold a
 
 ***
 
-###My Quiz Answer
+### My Quiz Answer
 
 ```python
 import matplotlib.pyplot as plt

@@ -1,6 +1,6 @@
-#Defining The Problem
+# Defining The Problem
 
-When a person drives, they use their eyes to percieve the world around them and make decisions according to what they see
+When a person drives, they use their eyes to perceive the world around them and make decisions according to what they see
 
 A self-driving car can do this too by using its' many cameras
 

@@ -1,10 +1,10 @@
-#Numerical Stability
+# Numerical Stability
 
 When you do numerical computations you always have to worry about calculating values that are too large or too small. In particular, adding very small values to a very large value can introduce a lot of errors.
 
 ***
 
-####Example
+#### Example
 
 ```python
 a = 1000000000
@@ -13,7 +13,7 @@ for i in range(1000000):
 print(a - 1000000000)
 ```
 
-####Output
+#### Output
 
 ```
 0.953674316406
@@ -32,7 +32,7 @@ for i in range(1000000):
 print(a - 1000000000)
 ```
 
-####Output
+#### Output
 
 ```
 0.999999999918
@@ -72,9 +72,9 @@ We will draw the weights randomly from a Gaussian distribution with mean zero an
 
 **Use a small sigma to begin with**
 
--
+***
 
-###Initialization of a Logistic Classifier
+### Initialization of a Logistic Classifier
 
 L = 1/N * (Summation i(D(S(w*x_i + b), L_i)))
 

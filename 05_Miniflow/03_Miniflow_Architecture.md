@@ -1,4 +1,4 @@
-#Miniflow Architecture
+# Miniflow Architecture
 
 Let's consider how to implement this graph structure in MiniFlow. We'll use a Python class to represent a generic node.
 
@@ -66,7 +66,7 @@ class Node(object):
 
 ***
 
-###Nodes that Calculate
+### Nodes that Calculate
 
 While Node defines the base set of properties that every node holds, only specialized subclasses of Node will end up in the graph. As part of this lab, you'll build the subclasses of Node that can perform calculations and hold values. For example, consider the Input subclass of Node.
 
@@ -97,7 +97,7 @@ You can set value either explicitly or with the forward() method. This value is 
 
 ***
 
-###The Add Subclass
+### The Add Subclass
 
 Add, which is another subclass of Node, actually can perform a calculation (addition).
 

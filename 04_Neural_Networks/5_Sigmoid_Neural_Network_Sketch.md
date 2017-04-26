@@ -1,6 +1,6 @@
-#Sigmoid Neural Network Sketch
+# Sigmoid Neural Network Sketch
 
-###Sigmoid
+### Sigmoid
 
 Sigmoid is a function that makes an "S" shape when plotted on a graph. 
 
@@ -10,7 +10,7 @@ As activation becomes less, we will go towards 0, and as it rises we will go tow
 
 ***
 
-###Neural Network
+### Neural Network
 
 We can construct a neural network using Sigmoid Units, a chain of relationships between input layer (The different components of x) and the output (y). The way this will happen is that there are other layers of units in-between that are each computing the weighted sum, sigmoided, of the layer before it. These other layers of units (between the output and the input) are referred to as hidden layers.
 
@@ -23,5 +23,3 @@ We have information flowing from the inputs to the outputs, but we also have err
 This works as long as the function is differentiable. 
 
 Sometimes there are multiple local optimums. You might need to change more than just one weight at a time to get to the most optimum solution.
-
-***

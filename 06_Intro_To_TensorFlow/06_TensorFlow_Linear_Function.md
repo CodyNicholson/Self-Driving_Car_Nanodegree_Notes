@@ -1,4 +1,4 @@
-#TensorFlow Linear Function
+# TensorFlow Linear Function
 
 Let’s derive the function y = Wx + b. We want to translate our input, x, to labels, y.
 
@@ -24,7 +24,7 @@ Our new function becomes Wx + b, allowing us to create predictions on linearly s
 
 ***
 
-###Matrix Multiplication Quiz
+### Matrix Multiplication Quiz
 
 Calculate the logits a and b for the following formula.
 
@@ -38,7 +38,7 @@ y = Wx + b
 
 ***
 
-###Transposition
+### Transposition
 
 We've been using the y = Wx + b function for our linear function.
 
@@ -56,7 +56,6 @@ x now has the dimensions 1x3, W now has the dimensions 3x2, and b now has the di
 
 You'll notice that the elements in this 1x2 matrix are the same as the elements in the 2x1 matrix from the quiz. Again, these matrices are simply transposed.
 
-
 ![alt tag](y1.gif)
 
 We now have our logits! The columns represent the logits for our two labels.
@@ -65,11 +64,11 @@ Now you can learn how to train this function in TensorFlow.
 
 ***
 
-###Weights and Bias in TensorFlow
+### Weights and Bias in TensorFlow
 
 The goal of training a neural network is to modify weights and biases to best predict the labels. In order to use weights and bias, you'll need a Tensor that can be modified. This leaves out tf.placeholder() and tf.constant(), since those Tensors can't be modified. This is where tf.Variable class comes in.
 
-#####**tf.Variable()
+##### tf.Variable()
 
 
 ```python
@@ -78,7 +77,7 @@ x = tf.Variable(5)
 
 The tf.Variable class creates a tensor with an initial value that can be modified, much like a normal Python variable. This tensor stores its state in the session, so you must initialize the state of the tensor manually. You'll use the tf.global_variables_initializer() function to initialize the state of all the Variable tensors.
 
-Initialization
+##### Initialization
 
 ```python
 init = tf.global_variables_initializer()
@@ -92,7 +91,7 @@ Initializing the weights with random numbers from a normal distribution is good 
 
 Similarly, choosing weights from a normal distribution prevents any one weight from overwhelming other weights. You'll use the tf.truncated_normal() function to generate random numbers from a normal distribution.
 
-####**tf.truncated_normal()**
+#### tf.truncated_normal()
 
 ```python
 n_features = 120
@@ -104,7 +103,7 @@ The tf.truncated_normal() function returns a tensor with random values from a no
 
 Since the weights are already helping prevent the model from getting stuck, you don't need to randomize the bias. Let's use the simplest solution, setting the bias to 0.
 
-####**tf.zeros()**
+#### tf.zeros()
 
 ```python
 n_labels = 5
@@ -115,7 +114,7 @@ The tf.zeros() function returns a tensor with all zeros.
 
 ***
 
-###Linear Classifier Quiz
+### Linear Classifier Quiz
 
 ![alt tag](mnist.png)
 
@@ -131,7 +130,7 @@ The images above are trained weights for each label (0, 1, and 2). The weights d
 
 ***
 
-###Instructions
+### Instructions
 
 Open quiz.py.
 

@@ -1,4 +1,4 @@
-#Neural Network Graphs
+# Neural Network Graphs
 
 ![alt tag](neuralNetGraph.png)
 
@@ -12,7 +12,7 @@ Layers between the input layer and the output layer are called hidden layers.
 
 ***
 
-###Forward Propagation
+### Forward Propagation
 
 By propagating values from the first layer (the input layer) through all the mathematical functions represented by each node, the network outputs a value. This process is called a **forward pass**.
 
@@ -22,7 +22,7 @@ Notice that the output layer performs a mathematical function, addition, on its 
 
 ***
 
-###Graphs
+### Graphs
 
 The nodes and edges create a graph structure. Though the example above is fairly simple, it isn't hard to imagine that increasingly complex graphs can calculate almost anything.
 

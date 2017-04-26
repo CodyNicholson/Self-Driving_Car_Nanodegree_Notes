@@ -1,4 +1,4 @@
-#Stochastic Gradient Descent
+# Stochastic Gradient Descent
 
 Stochastic Gradient Descent (SGD) is a version of Gradient Descent where on each forward pass a batch of data is randomly sampled from total dataset. Remember when we talked about the batch size earlier? That's the size of the batch. Ideally, the entire dataset would be fed into the neural network on each forward pass, but in practice, it's not practical due to memory constraints. SGD is an approximation of Gradient Descent, the more batches processed by the neural network, the better the approximation.
 
@@ -63,7 +63,7 @@ Notice the cost or loss trending towards 0.
 
 ***
 
-###Code
+### Code
 
 nn.py:
 

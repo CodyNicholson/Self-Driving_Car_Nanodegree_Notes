@@ -1,4 +1,4 @@
-#Transition To Classification
+# Transition To Classification
 
 Great job so far! In the next few videos you'll learn about how to apply neural networks in the context of classification.
 Good job! You've accomplished a lot. In particular, you did the following:

@@ -1,4 +1,4 @@
-#Linear Regression
+# Linear Regression
 
 Given a scatterplot of data we can use linear regression to estimate the location of points based on other points
 

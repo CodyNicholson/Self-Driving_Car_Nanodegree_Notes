@@ -1,4 +1,4 @@
-#Computer Vision
+# Computer Vision
 
 Throughout this Nanodegree Program, we will be using Python with OpenCV for computer vision work. OpenCV stands for Open-Source Computer Vision. For now, you don't need to download or install anything, but later in the program we'll help you get these tools installed on your own computer.
 
@@ -6,9 +6,9 @@ OpenCV contains extensive libraries of functions that you can use. The OpenCV li
 
 ***
 
-###Canny Edge Detection
+### Canny Edge Detection
 
-To detect the edges of objects in an image we first need to turn the image into greyscale (black & white), and then get the gradient of the image
+To detect the edges of objects in an image we first need to turn the image into grayscale (black & white), and then get the gradient of the image
 
 By identifying edges, we can more easily detect objects based on their shape
 
@@ -20,13 +20,13 @@ low_threshold & high_threshold determine how strong the edges must be to be dete
 
 -
 
-Looking at a grayscale image you can see bright points, dark points, and all the gray in the middle. Rapid changes in brightness are where we find the edges. Our image is just a mathemetical function of x and y (f(x, y) = pixel value). By taking the derivative to measure the change in this function. Small derivatives denotes a small change, big derivitives denote big changes. Taking he derivative of X and Y simultaneously will provide us with the gradient. By computing the gradient we are measuring how fast pixels values are changing at each point in an image, and in which direction they are changing most rapidly. Computing the gradient gives us thick edges. With the Canny algorithm we will thin out these edges to find just the individual pixels that follow the strongest gradients. We will then extend those strong edges to include pixels all the way down to a lower threshold that we define when calling the Canny function.
+Looking at a grayscale image you can see bright points, dark points, and all the gray in the middle. Rapid changes in brightness are where we find the edges. Our image is just a mathematical function of x and y (f(x, y) = pixel value). By taking the derivative to measure the change in this function. Small derivatives denotes a small change, big derivatives denote big changes. Taking he derivative of X and Y simultaneously will provide us with the gradient. By computing the gradient we are measuring how fast pixels values are changing at each point in an image, and in which direction they are changing most rapidly. Computing the gradient gives us thick edges. With the Canny algorithm we will thin out these edges to find just the individual pixels that follow the strongest gradients. We will then extend those strong edges to include pixels all the way down to a lower threshold that we define when calling the Canny function.
 
 **Note! The standard location of the origin (x=0, y=0) for images is in the top left corner with y values increasing downward and x increasing to the right. This might seem weird at first, but if you think about an image as a matrix, it makes sense that the "00" element is in the upper left.**
 
 ***
 
-###Canny Edge Detection in Action
+### Canny Edge Detection in Action
 
 First, we need to read in an image:
 
@@ -107,7 +107,7 @@ In the next quiz you'll get to try this on your own and mess around with the par
 
 ***
 
-###Quiz
+### Quiz
 
 ```python
 # Do all the relevant imports

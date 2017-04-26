@@ -1,4 +1,4 @@
-#Forward Propagation
+# Forward Propagation
 
 MiniFlow has two methods to help you define and then run values through your graphs: topological_sort() and forward_pass().
 
@@ -49,7 +49,7 @@ def forward_pass(output_node, sorted_nodes):
 
 -
 
-###Quiz 1 - Passing Values Forward
+### Quiz 1 - Passing Values Forward
 
 Create and run this graph!
 
@@ -57,7 +57,7 @@ Create and run this graph!
 
 -
 
-####Setup
+#### Setup
 
 Review nn.py and miniflow.py.
 
@@ -233,7 +233,7 @@ def forward_pass(output_node, sorted_nodes):
 
 -
 
-###Professor's Solution
+### Professor's Solution
 
 Here's my solution (I'm just showing forward method of the Add class):
 

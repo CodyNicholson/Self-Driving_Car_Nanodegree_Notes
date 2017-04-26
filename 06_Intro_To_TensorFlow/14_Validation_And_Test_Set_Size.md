@@ -1,4 +1,4 @@
-#Validation & Test Set Size
+# Validation & Test Set Size
 
 Imagine that your validation set has just six examples with an accuracy of 66%
 
@@ -8,13 +8,13 @@ The bigger your test set, the less noisy the accuracy measurement will be. A cha
 
 ***
 
-###Example
+### Example
 
 If you have 3000 examples and you use the **Rule of '30'** described above, a change from 80% to 81% would be statistically significant whereas a change from 80.5% to 80% would not be
 
 ***
 
-###Validation Set Size
+### Validation Set Size
 
 Since we like to use the Rule of 30, we also like to keep our Validation Set Size above 30000 examples
 

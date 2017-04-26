@@ -1,10 +1,10 @@
-#Using the Hough Transform to find lines from Canny edges
+# Using the Hough Transform to find lines from Canny edges
 
 After we take a gray scaled image and then use edge detection to turn it into an image full of dots, but only dots that represent edges in the original image. We now have to connect the dots. We can connect the dots to look for any kind of shape, but in this case we are looking for lane lines. To find lane lines we need to first adopt a model of a line and then fit that model to the assortment of dots in my edge detected image. Keeping in mind that my image is just a function of x any y, I can use equation of a line (Y = MX + B) to define the type of line I am looking for. In this case my model includes two parameters, M and B. In image space a line is plotted as X versus Y but in Parameter Space (Hough Space) I can represent that same line as M versus B instead. 
 
 The **Hough Transform** is the conversion from **Image Space** to **Hough Space**
 
-The charaterization of a line in image space will be a single point at the position (M,B) in Hough Space
+The characterization of a line in image space will be a single point at the position (M,B) in Hough Space
 
 ***
 
@@ -54,7 +54,7 @@ Our strategy to find lines in image space will be to will be to look for interse
 
 ***
 
-###Implementing a Hough Transform on Edge Detected Image
+### Implementing a Hough Transform on Edge Detected Image
 
 Now you know how the Hough Transform works, but to accomplish the task of finding lane lines, we need to specify some parameters to say what kind of lines we want to detect (i.e., long lines, short lines, bendy lines, dashed lines, etc.).
 
@@ -133,7 +133,7 @@ As you can see I've detected lots of line segments!
 
 ***
 
-###Example Of Tying It All Together
+### Example Of Tying It All Together
 
 ```python
 

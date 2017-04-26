@@ -1,4 +1,4 @@
-#Softmax Algorithm
+# Softmax Algorithm
 
 The next step is to assign a probability to each label, which you can then use to classify the data. Use the softmax function to turn your logits into probabilities.
 
@@ -34,10 +34,10 @@ Output:
 
 ***
 
-###Important Note
+### Important Note
 
 If you increase the size of the y that you pass through your Softmax function (S(y*10)) then your algorithm will make your classifier very confident about its predictions.
 
-If you decrease the y that you pass through your Softmax function (S(y/10)) then your algorithm will become much less condifent about its predications.
+If you decrease the y that you pass through your Softmax function (S(y/10)) then your algorithm will become much less confident about its predications.
 
 You can use this trick at different times in your system to get the best end result. For example, maybe you would make it so that your algorithm was not confident to start, but as you run the algorithm more and more you manipulate the y to make it more confident later on.
