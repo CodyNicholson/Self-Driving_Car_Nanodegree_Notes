@@ -1,6 +1,6 @@
 # Motion Update - Total Probability
 
-![alt tag](MotionUpdateTotalProbability.jpg)
+![alt tag](imgs/MotionUpdateTotalProbability.jpg)
 
 In the above image, you can see that we have a car trying to understand the world around it
 
