@@ -4,7 +4,7 @@ When we design a Kalman Filter we need two things: A state transition function f
 
 There is a prediction step where we take our best measurement X and multiply it with a state transition matrix F and then we add whatever motion we know of, U. (X * F + U) = X prime
 
-![alt tag](imgs/predictionStep.jpg)
+![alt tag](imgs/predictionStep.JPG)
 
 ### Code For Multi-Dimensional Kalman Filter
 
