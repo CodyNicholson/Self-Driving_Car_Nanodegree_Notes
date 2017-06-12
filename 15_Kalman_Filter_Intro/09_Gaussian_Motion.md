@@ -1,6 +1,6 @@
 # Gaussian Motion Update (Also called prediction)
 
-![alt tag](imgs/motionUpdate.jpg)
+![alt tag](imgs/motionUpdate.JPG)
 
 M prime = new mean
 

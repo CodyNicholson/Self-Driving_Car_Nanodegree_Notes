@@ -8,7 +8,7 @@ In the prediction we'll use total probability, which is a convolution, or simply
 
 ***
 
-![alt tag](newMean1.jpg)
+![alt tag](imgs/newMean1.JPG)
 
 The new mean can be found between the prior and the posterior
 

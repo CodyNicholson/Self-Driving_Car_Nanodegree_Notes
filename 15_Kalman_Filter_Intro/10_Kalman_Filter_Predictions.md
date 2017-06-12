@@ -12,7 +12,7 @@ The variance^2 is replaced by what is called a covariance and it is a matrix wit
 
 Image we have two Gaussian distributions - one for velocity, and one for location. Each of these Gaussians has its own uncertainty. If we put these Gaussians together into one Gaussian, the overlapp will form a new Gaussian that will be much more certain than either of the original Gaussians.
 
-![alt tag](imgs/2dGaussian.jpg)
+![alt tag](imgs/2dGaussian.JPG)
 
 ***
 

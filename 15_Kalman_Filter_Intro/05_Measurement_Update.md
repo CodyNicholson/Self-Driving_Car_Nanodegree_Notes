@@ -2,7 +2,7 @@
 
 ### Probability After Sense
 
-![alt tag](imgs/probAfterSense.jpg)
+![alt tag](imgs/probAfterSense.JPG)
 
 As you can see in the image, there are to different states in the world that our car interprets in this example: red and green. Since the car senses red, the probability for our red cells increases and our probability for our green cells decreases since we multiply red call values by different numbers since we detected a red cell.
 
