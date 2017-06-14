@@ -36,3 +36,10 @@ If you receive two measurements simultaneously from different sensors, you can u
 
 ![alt tag](imgs/defVariables.png)
 
+***
+
+### Additional Info About Predict/Update
+
+![alt tag](imgs/predUpdate1.png)
+
+Because we have already run a prediction-update iteration with the first sensor at time k+3, the output of the second prediction at time k+3 will actually be identical to the output from the update step with the first sensor. So, in theory, you could skip the second prediction step and just run a prediction, update, update iteration.
