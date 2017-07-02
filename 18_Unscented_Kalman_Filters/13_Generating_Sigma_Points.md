@@ -179,3 +179,5 @@ public:
 ```
 
 Now we know how to represent the uncertainty of the posterior state estimation with sigma points
+
+We can put these sigma points into the process function
