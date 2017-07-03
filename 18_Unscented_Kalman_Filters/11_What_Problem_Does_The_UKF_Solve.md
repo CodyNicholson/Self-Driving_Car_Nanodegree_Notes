@@ -8,7 +8,7 @@ Given a state vector **x** and the state covariance **P** at time step **k**. Wh
 
 **(k+1)|k** means that the estimation is for time **k+1** but the last measurement that has been taken into account was from **k**. This is what we have after the prediction, which is also called the **A priori estimation**.
 
-![alt tag](imgs/unscentedTransformation.png)
+![alt tag](imgs/unscentedTransformation.PNG)
 
 The ellipses visualize the distribution of our uncertainty. All points on the outside ellipse's edge have the same probability density. If the uncertainty is normally distributed, these points have the shape of an ellipse. It is often called the error ellipse. It is the visualization of the covariance matrix **P**. 
 
