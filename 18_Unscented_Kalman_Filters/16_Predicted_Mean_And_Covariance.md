@@ -4,11 +4,11 @@ Now that we have implemented a function to predict the sigma points, we can move
 
 We can calculate the mean and covariance of the predicted state using the predicted sigma points. The standard rule for calculating the mean and covariance for a group of state samples is given by these equations:
 
-![alt tag](imgs/predictedMeanAndCovarianceEquations.png)
+![alt tag](imgs/predictedMeanAndCovarianceEquations.PNG)
 
 The index **i** means we are talking about the column **i** of the matrix. We also have the weights to consider for each sigma point:
 
-![alt tag](imgs/predictedMeanAndCovarianceEquationsWeights.png)
+![alt tag](imgs/predictedMeanAndCovarianceEquationsWeights.PNG)
 
 In the above image you can see how the weights are calculated, and how they depend on lambda. We have predicted sigma points and we want to recover the covariance matrix. We need to use lambda to invert the spreading of the sigma points, and this is what the weights do.
 
