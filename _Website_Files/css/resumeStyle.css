@@ -1,0 +1,513 @@
+body,
+div,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+  padding:0;
+  margin:0;
+  font-family: "Roboto", sans-serif;
+}
+
+.clear-fix
+{
+  overflow: auto;
+}
+
+.education-entry,
+.work-entry,
+.project-entry,
+.honor-entry,
+.comServe-entry
+{
+  padding: 0 5%;
+}
+
+h1
+{
+  font-size: 40px;
+  color: #f5a623;
+  line-height: 48px;
+  display: inline;
+}
+
+h2
+{
+  font-weight: bold;
+  font-size: 24px;
+  color: #999;
+  line-height: 29px;
+  padding: 10px;
+}
+
+h3
+{
+  font-style: italic;
+  font-size: 20px;
+  color: #000;
+  line-height: 22px;
+}
+
+h4
+{
+  font-weight: bold;
+  font-size: 14px;
+  color: #4a4a4a;
+  line-height: 17px;
+}
+
+h2,
+h3,
+h4,
+h5
+{
+  padding:10px 5%;
+
+}
+
+
+.date-text
+{
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: left;
+  padding-right: 5px;
+}
+
+.location-text
+{
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: right;
+
+}
+
+p
+{
+  font-size: 14px;
+  color: #333;
+  line-height: 21px;
+}
+
+a
+{
+  color: #1199c3;
+  text-decoration: none;
+}
+
+.itemTitle
+{
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.welcomeMsgDiv
+{
+    display: inline-flex;
+}
+
+.welcome-message
+{
+  font-style: italic;
+  font-size: 18px;
+  color: #f3f3f3;
+  line-height: 28px;
+}
+
+#skills-h3
+{
+  color: #f5ae23;
+  display: none;
+}
+
+.orange
+{
+  background-color: #f5ae23;
+}
+
+.orange-text
+{
+  color: #f5ae23;
+}
+
+.white-text
+{
+  font-weight: bold;
+  color: #fff;
+}
+
+.gray
+{
+  background-color: #f3f3f3;
+  padding-bottom: 10px;
+  clear:both;
+}
+
+.white
+{
+  padding-bottom: 10px;
+  clear:both;
+}
+
+.dark-gray
+{
+  background-color: #4a4a4a;
+}
+
+/* TODO: Replace with image later */
+#header
+{
+  background-color: #484848;
+}
+
+.flex-box
+{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.flex-row
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.skill-item
+{
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.center-content
+{
+  padding: 2.5% 5% 1.5% 5%;
+}
+
+ul
+{
+  list-style-type: none;
+}
+
+.biopic
+{
+  float: left;
+  margin: 10px;
+  width: 200px;
+  display: none;
+  border: 3px solid black;
+}
+
+.returnHomeL
+{
+    display: none;
+    height: 40px;
+    width: 120px;
+    background-color: #f5ae23;
+    color: white;
+    float: right;
+    text-align: center;
+    line-height: 2.5;
+    font-weight: 600;
+    right: 5%;
+}
+
+.returnHomeS
+{
+    display: unset;
+    height: 40px;
+    width: 40px;
+    background-color: #f5ae23;
+    color: white;
+    float: right;
+    text-align: center;
+    line-height: 1.3;
+    right: 5%;
+    margin-left: 2px;
+    font-size: 1.9em;
+    font-family: "EmojiSymbols";
+    font-weight: 500;
+}
+
+.downloadBtnL
+{
+    display: none;
+    height: 40px;
+    width: 160px;
+    background-color: #f5ae23;
+    color: white;
+    float: right;
+    text-align: center;
+    line-height: 2.5;
+    font-weight: 600;
+    right: 5%;
+    margin-left: 2px;
+}
+
+.downloadBtnS
+{
+    display: unset;
+    height: 40px;
+    width: 40px;
+    background-color: #f5ae23;
+    color: white;
+    float: right;
+    text-align: center;
+    line-height: 1.3;
+    font-weight: 600;
+    right: 5%;
+    margin-left: 2px;
+    font-size: 1.9em;
+}
+
+.download
+{
+    height: 80%;
+    width: 80%;
+    margin: 0;
+    padding: 10%;
+}
+
+.returnHomeL:hover, .downloadBtnS:hover, .downloadBtnL:hover, .returnHomeS:hover
+{
+    background-color: white;
+    color: #f5ae23;
+}
+
+img
+{
+  margin: 10px;
+}
+
+span
+{
+  padding: 5px;
+}
+
+#lets-connect
+{
+  text-align: center;
+}
+
+a.blueWords
+{
+    color: indianred;
+    padding-bottom: 5px;
+}
+
+a.blueWords:hover
+{
+    color: red;
+}
+
+#map
+{
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+
+#mapDiv
+{
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width: 360px)
+{
+    #mapDiv
+    {
+        padding-bottom: 25%;
+    }
+}
+
+@media only screen and (max-width: 1024px)
+{
+  #lets-connect
+  {
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width:900px)
+{
+  .biopic
+  {
+    width: 175px;
+  }
+}
+
+@media only screen and (max-width: 750px)
+{
+  #lets-connect
+  {
+    margin-top: 10%;
+  }
+  .biopic
+  {
+    width: 150px;
+  }
+  .welcome-message
+  {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 750px)
+{
+  #skills-h3,
+  .biopic
+  {
+    display: block;
+  }
+    .downloadBtnS
+  {
+    display: none;
+  }
+
+  .downloadBtnL
+  {
+    display: unset;
+  }
+
+  .returnHomeS
+  {
+    display: none;
+  }
+
+  .returnHomeL
+  {
+    display: unset;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 900px)
+{
+  p
+  {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  em,
+  .date-text,
+  .location-text
+  {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  h1
+  {
+    font-size: 50px;
+    line-height: 58px;
+  }
+
+  h3
+  {
+    font-size: 22px;
+  }
+
+  h2
+  {
+    font-size: 28px;
+  }
+
+  ul li
+  {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  a.blueWords
+  {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 900px)
+{
+  p
+  {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  em,
+  .date-text,
+  .location-text
+  {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  h1
+  {
+    font-size: 60px;
+    line-height: 68px;
+  }
+
+  h2
+  {
+    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  h3
+  {
+    font-size: 28px;
+  }
+
+  ul li
+  {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .welcome-message
+  {
+    font-size: 24px;
+  }
+
+  a.blueWords
+  {
+    font-size: 26px;
+  }
+
+  .returnHomeL
+  {
+    height: 46px;
+    width: 150px;
+    line-height: 2.2;
+    font-size: 20px;
+  }
+
+  .downloadBtnL
+  {
+    height: 46px;
+    width: 200px;
+    line-height: 2.2;
+    font-size: 20px;
+  }
+}
