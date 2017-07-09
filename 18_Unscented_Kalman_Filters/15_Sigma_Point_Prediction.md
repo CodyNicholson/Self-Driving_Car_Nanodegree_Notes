@@ -6,7 +6,7 @@ Using the matrix of augmented sigma points we simply insert every sigma point in
 
 The input to the process model is a seven dimensional augmented vector, which makes sense. This makes sense since there are five state dimensions and two noise dimensions. The output is a five dimensional vector because this is what the process model returns, that means the matrix with the predicted sigma points has five rows and fifteen columns.
 
-![alt tag](imgs/sigmaPointPrediction.png)
+![alt tag](imgs/sigmaPointPrediction.PNG)
 
 ***
 
