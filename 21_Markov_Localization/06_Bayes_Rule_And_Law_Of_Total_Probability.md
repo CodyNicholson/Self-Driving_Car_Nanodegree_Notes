@@ -20,13 +20,13 @@ The problem with this definition is that we have no information where the car wa
 
 In this case the law of Total Probability will help - this has nothing to do with Bayes rule
 
-![alt tag](imgs/totalProb.png)
+![alt tag](imgs/totalProb.PNG)
 
 We introduce a state **x_t - 1** and assume the state is given. Then, the probability distribution of our motion model can be expressed as the integral of **p(x_t)** given the previous states **x_(t-1)**, the previous observations **z_(1:t - 1)**, our controls **u_(1:t - 1)**, and the map **m** all multiplied by the probability distribution of the previous state itself divided by the whole state space **x_(t - 1)**.
 
 For better understanding, assume you only have **p** of **x_t** and you introduce **p(x_(t - 1))**. Then you would have inside the integral **p(x_t)** given **x_(t - 1)** and the probability distribution of **p(x_(t - 1))** itself. This is exactly the same as the example seen in the bottom right corner of the above image. But, since we have conditions in our target distribution, you also have to consider them in the first and second term.
 
-![alt tag](imgs/dpendenciesBetweenRobots.png)
+![alt tag](imgs/dpendenciesBetweenRobots.PNG)
 
 The above graph is a visualization of the dependencies between the robots. Since we introduced **x_(t - 1)**, we are looking at all possible states of the previous time step, and then we predict where the car will be in the next time step denoted **x_t**. Since we also have all the other given values (shown in the green boxes), we also use this information to estimate **x_t**. The same information is also used to estimate **x_(t - 1)** itself. Of course, **x_(t-1)** is unknown. Our goal is to simplify this relation by using meaningful assumptions.
 
