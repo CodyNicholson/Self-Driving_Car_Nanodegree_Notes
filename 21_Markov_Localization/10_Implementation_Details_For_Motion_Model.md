@@ -1,0 +1,3 @@
+# Implementation Details For Motion Model
+
+At the beginning of the implementation we need details to help with the prediction step, so we assume that the car is parked at a tree or a street lamp (give or take 1 meter). The transition model is controlled only by **x_t-1** and **u_t**. Here we assume the transition model is independent from the map. **u_t** is a direct move pointed in driving direction. The transition model is defined by the 1D normal distribution defined by the mean **u_t** and **sigma u_t**, and we have to evaluate at position **x_t - x_t-1_i**. In our example the **sigma of u_t** is 1 meter. The state space range is from 0 to 99 meters with a 1 meter step resolution.
