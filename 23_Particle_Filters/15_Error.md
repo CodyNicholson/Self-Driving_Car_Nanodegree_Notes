@@ -1,8 +1,12 @@
-# Using The Robot Class
+# Error
+
+Now we will print out the quality of the solution instead of the particles themselves. We will use the **eval()** function defined in the code below that computes the average error of each particle relative to the robot position in **x** and **y** - not in the orientation. It does this by computing the Euclidean distance formula to compare the actual to the predicted position of the robot, and gets the average of those values across all the particles. Since the world is cyclic in this case, we have some additional logic concerning the world size as well in our **eval()** function.
 
 ```python
-landmarks = [[20.0, 20.0], [80.0, 80.0], [20.0, 80.0], [80.0, 20.0]]
+from math import *
+import random
 
+landmarks  = [[20.0, 20.0], [80.0, 80.0], [20.0, 80.0], [80.0, 20.0]]
 world_size = 100.0
 
 class robot:
@@ -24,14 +28,14 @@ class robot:
         self.x = float(new_x)
         self.y = float(new_y)
         self.orientation = float(new_orientation)
-    
+
     def set_noise(self, new_f_noise, new_t_noise, new_s_noise):
         # makes it possible to change the noise parameters
         # this is often useful in particle filters
         self.forward_noise = float(new_f_noise);
         self.turn_noise    = float(new_t_noise);
         self.sense_noise   = float(new_s_noise);
-    
+
     def sense(self):
         Z = []
         for i in range(len(landmarks)):
@@ -62,17 +66,20 @@ class robot:
         return res
     
     def Gaussian(self, mu, sigma, x):
+        
         # calculates the probability of x for 1-dim Gaussian with mean mu and var. sigma
         return exp(- ((mu - x) ** 2) / (sigma ** 2) / 2.0) / sqrt(2.0 * pi * (sigma ** 2))
     
     def measurement_prob(self, measurement):
+        
         # calculates how likely a measurement should be
+        
         prob = 1.0;
         for i in range(len(landmarks)):
             dist = sqrt((self.x - landmarks[i][0]) ** 2 + (self.y - landmarks[i][1]) ** 2)
             prob *= self.Gaussian(dist, self.sense_noise, measurement[i])
         return prob
-    
+      
     def __repr__(self):
         return '[x=%.6s y=%.6s orient=%.6s]' % (str(self.x), str(self.y), str(self.orientation))
 
@@ -84,45 +91,45 @@ def eval(r, p):
         err = sqrt(dx * dx + dy * dy)
         sum += err
     return sum / float(len(p))
-```
 
-The main class is a class called Robot. This robot lives in a 2D world of size 100 meters x 100 meters. It can see 4 different landmarks that are located at the coordinates stored in the **landmarks** object.
-
-To make a robot all we have to do is call the function **robot()** and assign it to a variable **myrobot**. We can set a position for our robot using the **set()** function defined. The three value we pass the **set()** function are the x-coordinate, the y-coordinate, and the heading  in radians. We can print the resulting robot like this:
-
-```python
 myrobot = robot()
-myrobot.set(10.0, 10.0, 0.0)
-print myrobot
+myrobot = myrobot.move(0.1, 5.0)
+Z = myrobot.sense()
+N = 1000
+T = 10
+
+p = []
+for i in range(N):
+    r = robot()
+    r.set_noise(0.05, 0.05, 5.0)
+    p.append(r)
+
+for t in range(T):
+    myrobot = myrobot.move(0.1, 5.0)
+    Z = myrobot.sense()
+
+    p2 = []
+    for i in range(N):
+        p2.append(p[i].move(0.1, 5.0))
+    p = p2
+
+    w = []
+    for i in range(N):
+        w.append(p[i].measurement_prob(Z))
+
+    p3 = []
+    index = int(random.random() * N)
+    beta = 0.0
+    mw = max(w)
+    for i in range(N):
+        beta += random.random() * 2.0 * mw
+        while beta > w[index]:
+            beta -= w[index]
+            index = (index + 1) % N
+        p3.append(p[index])
+    p = p3
+
+    print eval(myrobot, p)
 ```
 
-output:
-
-```
-[x=10.0 y=10.0 heading=0,0]
-```
-
-Now lets make the robot move 10 meters at an andle of pi/2:
-
-```python
-myrobot = myrobot.move(pi/2, 10.0)
-print myrobot
-```
-
-output:
-
-```
-[x=10.0 y=20.0 heading=1.5707]
-```
-
-To generate measurements we can use a method called **sense()** that gives you the distance to the 4 landmarks 1, 2, 3, and 4.
-
-```python
-print myrobot.sense()
-```
-
-output:
-
-```
-[10.0, 92.195444572928878, 60.827625302982199, 70.0]
-```
+You don't always get the same error. Sometimes it fails if their is no particle nearby.

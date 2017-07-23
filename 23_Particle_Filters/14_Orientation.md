@@ -1,8 +1,17 @@
-# Using The Robot Class
+# Orientation
+
+Assume we have a map with four landmarks and our robot is facing to the right. We get a certain set of distances that is invariant to the orientation. But now that robot moves, and we get a new set of distances. Now our orientation matters.
+
+If we assume a different initial orientation, and then the robot moves, its measurements will be very different. So orientation does matter in the second step of the particle filtering because prediction is so different for different orientations.
 
 ```python
-landmarks = [[20.0, 20.0], [80.0, 80.0], [20.0, 80.0], [80.0, 20.0]]
+# In this exercise, write a program that will
+# run your previous code twice.
 
+from math import *
+import random
+
+landmarks  = [[20.0, 20.0], [80.0, 80.0], [20.0, 80.0], [80.0, 20.0]]
 world_size = 100.0
 
 class robot:
@@ -67,62 +76,52 @@ class robot:
     
     def measurement_prob(self, measurement):
         # calculates how likely a measurement should be
+        
         prob = 1.0;
         for i in range(len(landmarks)):
             dist = sqrt((self.x - landmarks[i][0]) ** 2 + (self.y - landmarks[i][1]) ** 2)
             prob *= self.Gaussian(dist, self.sense_noise, measurement[i])
         return prob
-    
+      
     def __repr__(self):
         return '[x=%.6s y=%.6s orient=%.6s]' % (str(self.x), str(self.y), str(self.orientation))
 
-def eval(r, p):
-    sum = 0.0;
-    for i in range(len(p)): # calculate mean error
-        dx = (p[i].x - r.x + (world_size/2.0)) % world_size - (world_size/2.0)
-        dy = (p[i].y - r.y + (world_size/2.0)) % world_size - (world_size/2.0)
-        err = sqrt(dx * dx + dy * dy)
-        sum += err
-    return sum / float(len(p))
-```
-
-The main class is a class called Robot. This robot lives in a 2D world of size 100 meters x 100 meters. It can see 4 different landmarks that are located at the coordinates stored in the **landmarks** object.
-
-To make a robot all we have to do is call the function **robot()** and assign it to a variable **myrobot**. We can set a position for our robot using the **set()** function defined. The three value we pass the **set()** function are the x-coordinate, the y-coordinate, and the heading  in radians. We can print the resulting robot like this:
-
-```python
 myrobot = robot()
-myrobot.set(10.0, 10.0, 0.0)
-print myrobot
-```
+myrobot = myrobot.move(0.1, 5.0)
+Z = myrobot.sense()
 
-output:
+N = 1000
+T = 10
+p = []
+for i in range(N):
+    x = robot()
+    x.set_noise(0.05, 0.05, 5.0)
+    p.append(x)
 
-```
-[x=10.0 y=10.0 heading=0,0]
-```
+for t in range(T):
+    myrobot = myrobot.move(0.1, 5.0)
+    Z = myrobot.sense()
 
-Now lets make the robot move 10 meters at an andle of pi/2:
+    p2 = []
+    for i in range(N):
+        p2.append(p[i].move(0.1, 5.0))
+    p = p2
 
-```python
-myrobot = myrobot.move(pi/2, 10.0)
-print myrobot
-```
+    w = []
+    for i in range(N):
+        w.append(p[i].measurement_prob(Z))
 
-output:
+    p3 = []
+    index = int(random.random() * N)
+    beta = 0.0
+    mw = max(w)
+    for i in range(N):
+        beta += random.random() * 2.0 * mw
+        while beta > w[index]:
+            beta -= w[index]
+            index = (index + 1) % N
+        p3.append(p[index])
+    p = p3
 
-```
-[x=10.0 y=20.0 heading=1.5707]
-```
-
-To generate measurements we can use a method called **sense()** that gives you the distance to the 4 landmarks 1, 2, 3, and 4.
-
-```python
-print myrobot.sense()
-```
-
-output:
-
-```
-[10.0, 92.195444572928878, 60.827625302982199, 70.0]
+print p
 ```

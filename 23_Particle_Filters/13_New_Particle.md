@@ -1,8 +1,18 @@
-# Using The Robot Class
+# New Particle
+
+Now we will take the list of particles and importance weights to sample **N** times with replacement and new particles with the sampling proportional to the importance weights.
+
+An obvious idea might be to compute all these normalized alphas, but we still have to be able to sample from those. So, in the spectrum of our alphas you might draw a random variable uniformly from the interval 0:1, and then find out the alpha so that all alphas leading up to it are smaller than beta, but if we add the new alpha to the sum you would get a value larger than beta. It is doable - in the best case you get an N*log(N) implementation, so it is inefficient. To get around this we can use a technique known as **Resampling The Wheel**.
+
+### Resampling The Wheel
+
+To make this more efficient and get better samples we can represent all our particles and importance weight in a big wheel. Each particle occupies a slice that corresponds to its importance weight. Particles with a bigger weight, like W5, occupy more space. Particles with a smaller weight occupy less space. Initially let's guess a particle index uniformly from the set of all indices. We can denote this as uniform sample at **U** from the discrete set of choices of index 1 all the way to **N**, and as a caveat in Python, it goes from 0 to **N**-1. Say we pick **W6**. Then we're going to construct the function better. I initialize the 0 and to which I add - when I construct these particles - a uniformly drawn continuous value that sits between 0 and (2 * **W** max), which is the largest of the importance weights in the important set (**W** max). If **W5** is the largest, we add a random value that might be as large as twice **W5**. Suppose the value we added brings us a quarter of the way around the pie graph. So if **W** index isn't as big as beta, then I subtract from beta this very value **W** index and I increment index by 1. 
 
 ```python
-landmarks = [[20.0, 20.0], [80.0, 80.0], [20.0, 80.0], [80.0, 20.0]]
+from math import *
+import random
 
+landmarks  = [[20.0, 20.0], [80.0, 80.0], [20.0, 80.0], [80.0, 20.0]]
 world_size = 100.0
 
 class robot:
@@ -62,67 +72,54 @@ class robot:
         return res
     
     def Gaussian(self, mu, sigma, x):
+        
         # calculates the probability of x for 1-dim Gaussian with mean mu and var. sigma
         return exp(- ((mu - x) ** 2) / (sigma ** 2) / 2.0) / sqrt(2.0 * pi * (sigma ** 2))
     
     def measurement_prob(self, measurement):
+        
         # calculates how likely a measurement should be
+        
         prob = 1.0;
         for i in range(len(landmarks)):
             dist = sqrt((self.x - landmarks[i][0]) ** 2 + (self.y - landmarks[i][1]) ** 2)
             prob *= self.Gaussian(dist, self.sense_noise, measurement[i])
-        return prob
+        return prob    
     
     def __repr__(self):
         return '[x=%.6s y=%.6s orient=%.6s]' % (str(self.x), str(self.y), str(self.orientation))
 
-def eval(r, p):
-    sum = 0.0;
-    for i in range(len(p)): # calculate mean error
-        dx = (p[i].x - r.x + (world_size/2.0)) % world_size - (world_size/2.0)
-        dy = (p[i].y - r.y + (world_size/2.0)) % world_size - (world_size/2.0)
-        err = sqrt(dx * dx + dy * dy)
-        sum += err
-    return sum / float(len(p))
-```
-
-The main class is a class called Robot. This robot lives in a 2D world of size 100 meters x 100 meters. It can see 4 different landmarks that are located at the coordinates stored in the **landmarks** object.
-
-To make a robot all we have to do is call the function **robot()** and assign it to a variable **myrobot**. We can set a position for our robot using the **set()** function defined. The three value we pass the **set()** function are the x-coordinate, the y-coordinate, and the heading  in radians. We can print the resulting robot like this:
-
-```python
 myrobot = robot()
-myrobot.set(10.0, 10.0, 0.0)
-print myrobot
-```
+myrobot = myrobot.move(0.1, 5.0)
+Z = myrobot.sense()
 
-output:
+N = 1000
+p = []
+for i in range(N):
+    x = robot()
+    x.set_noise(0.05, 0.05, 5.0)
+    p.append(x)
 
-```
-[x=10.0 y=10.0 heading=0,0]
-```
+p2 = []
+for i in range(N):
+    p2.append(p[i].move(0.1, 5.0))
+p = p2
 
-Now lets make the robot move 10 meters at an andle of pi/2:
+w = []
+for i in range(N):
+    w.append(p[i].measurement_prob(Z))
 
-```python
-myrobot = myrobot.move(pi/2, 10.0)
-print myrobot
-```
+p3 = []
+index = int(random.random() * N)
+beta = 0.0
+mw = max(w)
+for i in range(N):
+    beta += random.random() * 2.0 * mw
+    while beta > w[index]:
+        beta -= w[index]
+        index = (index + 1) % N
+    p3.append(p[index])
+p = p3
 
-output:
-
-```
-[x=10.0 y=20.0 heading=1.5707]
-```
-
-To generate measurements we can use a method called **sense()** that gives you the distance to the 4 landmarks 1, 2, 3, and 4.
-
-```python
-print myrobot.sense()
-```
-
-output:
-
-```
-[10.0, 92.195444572928878, 60.827625302982199, 70.0]
+print p
 ```
