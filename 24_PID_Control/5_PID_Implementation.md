@@ -2,7 +2,7 @@
 
 If you drive a car and your normal steering mode leads you to a trajectory far away from the goal, then what I submit you do is you notice over a long period of time you can't get closer. So you start steering more and more the more time goes by to the right to compensate this bias. You adjust to the bias. As a result, when you drive you steer the car a bit more. To do so we need a sustained situation of large error. That's measured by the integral, or the sum of the cross track errors over time. Let's make a new controller where steering is proportional to the cross track errors before is is equally proportional to the differential of the cross track error, but now it is also proportional to what's called the integral of the sum of all the cross track errors you ever observed. If we have a constant cross track error of 0.8, and the sume will increase by 0.8 for each time unit, it'll become larger and eventually it'll correct the robot's motion. This is called a **PID Controller**. 
 
-![alt tag](imgs/pidControllerFormula,PNG)
+![alt tag](imgs/pidControllerFormula.PNG)
 
 The integrated cross track error is the sum of all cross track errors you have ever observed
 
