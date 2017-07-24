@@ -140,7 +140,7 @@ ax1.plot(x_trajectory, np.zeros(n), 'r', label='reference')
 
 This is very similar to the P controller. We've added the **prev_cte** variable which is assigned to the previous CTE and **diff_cte**, the difference between the current CTE and previous CTE. We then put it all together with the new **tau_d** parameter to calculate the new steering value, **-tau_p * cte - tau_d * diff_cte**.
 
-![alt tag](imgs/pd.PNG)
+![alt tag](imgs/pd.png)
 
 ```
 cross_track_error = myrobot.y
