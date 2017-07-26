@@ -9,6 +9,9 @@ The integrated cross track error is the sum of all cross track errors you have e
 ### Code
 
 ```python
+# -----------
+# User Instructions
+#
 # Implement a P controller by running 100 iterations
 # of robot motion. The steering angle should be set
 # by the parameter tau so that:
@@ -18,12 +21,19 @@ The integrated cross track error is the sum of all cross track errors you have e
 # where the integrated crosstrack error (int_CTE) is
 # the sum of all the previous crosstrack errors.
 # This term works to cancel out steering drift.
+#
+# Only modify code at the bottom! Look for the TODO.
+# ------------
 
 import random
 import numpy as np
 import matplotlib.pyplot as plt
 
+# ------------------------------------------------
+# 
 # this is the Robot class
+#
+
 class Robot(object):
     def __init__(self, length=20.0):
         """
@@ -99,6 +109,15 @@ class Robot(object):
     def __repr__(self):
         return '[x=%.5f y=%.5f orient=%.5f]' % (self.x, self.y, self.orientation)
 
+############## ADD / MODIFY CODE BELOW ####################
+# ------------------------------------------------------------------------
+#
+# run - does a single control run
+
+robot = Robot()
+robot.set(0, 1, 0)
+
+
 def run(robot, tau_p, tau_d, tau_i, n=100, speed=1.0):
     x_trajectory = []
     y_trajectory = []
@@ -115,15 +134,6 @@ def run(robot, tau_p, tau_d, tau_i, n=100, speed=1.0):
         y_trajectory.append(robot.y)
     return x_trajectory, y_trajectory
 
-robot = Robot()
-robot.set(0, 1, 0)
-
-def run(robot, tau_p, tau_d, tau_i, n=100, speed=1.0):
-    x_trajectory = []
-    y_trajectory = []
-    # TODO: your code here
-    run(robot, tau_p, tau_d, tau_i)
-    return x_trajectory, y_trajectory
 
 x_trajectory, y_trajectory = run(robot, 0.2, 3.0, 0.004)
 n = len(x_trajectory)
